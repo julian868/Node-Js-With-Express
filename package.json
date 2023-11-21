@@ -4,7 +4,8 @@
   "description": "Learning Express Js with NodeJs",
   "main": "app.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "vercel-build" : "echo hello"
   },
   "author": "Julian Ellis",
   "license": "ISC",

@@ -16,7 +16,7 @@ exports.deleteMovie = (req, res) => {
 
 
 }
-exports. patchMovie = (req, res) => {
+exports.patchMovie = (req, res) => {
     let id = req.params.id * 1;
     let movieToUpdate = movies.find(el => el.id === id);
     let movieIndex = movies.indexOf(movieToUpdate);
@@ -35,7 +35,7 @@ exports. patchMovie = (req, res) => {
         });
     });
 }
-exports. postMovie = (req, res) => {
+exports.postMovie = (req, res) => {
     const newId = movies[movies.length - 1].id + 1;
     const newMovie = Object.assign({ id: newId }, req.body);
     movies.push(newMovie);
@@ -50,13 +50,13 @@ exports. postMovie = (req, res) => {
     console.log(newMovie);
     //res.send('Created');
 }
-exports. getMovie = (req, res) => {
+exports.getMovie = (req, res) => {
     let movie = movies.find(el => el.id === req.params.id * 1)
     if (movie)
         res.status(200).json(movie);
     else res.status(404).send("movie not found");
 }
-exports. getAllMovies = (req, res) => {
+exports.getAllMovies = (req, res) => {
     res.status(200).json({
         status: "success",
         requestedAt: req.requestedAt,
