@@ -3,6 +3,11 @@ const express = require('express');
 const morgan = require('morgan');
 const moviesRouter = require('./routes/moviesRoutes');
 
+const router = express.Router();
+router.get('/', (req, res) => {
+    res.status(200).send("hello world");
+})
+
 
 let app = express();
 
@@ -19,6 +24,7 @@ app.use((req, res, next) => {
     next();
 });
 app.use('/api/v1/movies/', moviesRouter);
+app.use(router);
 module.exports = app;
 app.get('/', (req, res) => {
     res.send("hello world");
