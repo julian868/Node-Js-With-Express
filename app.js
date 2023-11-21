@@ -20,6 +20,9 @@ app.use((req, res, next) => {
 });
 app.use('/api/v1/movies/', moviesRouter);
 module.exports = app;
+app.get('/', (req, res) => {
+    res.send("hello world");
+})
 
 // app.get('/api/v1/movies', getMovie);
 // app.get('/api/v1/movies/:id', getAllMovies);
