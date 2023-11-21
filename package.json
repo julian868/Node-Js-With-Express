@@ -2,9 +2,9 @@
   "name": "node-js-with-express",
   "version": "1.0.0",
   "description": "Learning Express Js with NodeJs",
-  "main": "./server.js",
+  "main": "./index.js",
   "scripts": {
-    "start": "node ./server.js",
+    "start": "node ./index.js",
     "vercel-build": "echo hello"
   },
   "author": "Julian Ellis",

@@ -1,6 +1,6 @@
 //Import Package
 const express = require('express');
-const morgan = require('morgan');
+//const morgan = require('morgan');
 const moviesRouter = require('./routes/moviesRoutes');
 
 const router = express.Router();
@@ -17,7 +17,7 @@ const logger = function (req, res, next) {
     next();
 }
 app.use(express.json());
-app.use(morgan('dev'));
+//app.use(morgan('dev'));
 app.use(logger);
 app.use((req, res, next) => {
     req.requestedAt = new Date().toISOString();
